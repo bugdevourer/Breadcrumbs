@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-quadrangle',
   templateUrl: './quadrangle.component.html',
-  styleUrls: ['./quadrangle.component.scss']
+  styleUrls: ['../figures.scss']
 })
 export class QuadrangleComponent implements OnInit {
 

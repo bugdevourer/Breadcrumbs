@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-trapezoid',
   templateUrl: './trapezoid.component.html',
-  styleUrls: ['./trapezoid.component.scss']
+  styleUrls: ['../figures.scss']
 })
 export class TrapezoidComponent implements OnInit {
 
