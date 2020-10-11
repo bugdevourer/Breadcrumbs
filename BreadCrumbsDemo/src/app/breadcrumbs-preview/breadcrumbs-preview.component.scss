@@ -1,5 +1,6 @@
 .breadcrumbs-container{
     display: flex;
+    flex-flow: wrap;
     
     span{
         margin: 0 16px;
