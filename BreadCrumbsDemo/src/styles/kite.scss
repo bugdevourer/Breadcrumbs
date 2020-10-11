@@ -1,0 +1,43 @@
+.kite {
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom: 15px solid green;
+  top: -20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.kite:after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top: 30px solid green;
+  z-index: -1;
+}
+
+.kite {
+    width: 0;
+    height: 0;
+    border: 20vw solid transparent;
+    border-bottom: 15vh solid green;
+    top: -20vw;
+    position: relative;
+    margin-bottom: 10vh;
+  }
+
+.kite:after {
+    content: "";
+    position: absolute;
+    left: -20vw;
+    top: 15vh;
+    width: 0;
+    height: 0;
+    border: 20vw solid transparent;
+    border-top: 30vh solid green;
+    z-index: -1;
+  }

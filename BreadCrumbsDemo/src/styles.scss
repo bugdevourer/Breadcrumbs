@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/parallelogram.scss";
+@import "./styles/quadrangle.scss";
+@import "./styles/square.scss";
+@import "./styles/rectangle.scss";
+@import "./styles/rhombus.scss";
+@import "./styles/trapezoid.scss";
+@import "./styles/kite.scss";
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
