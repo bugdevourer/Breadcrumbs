@@ -9,6 +9,13 @@ const routes: Routes = [
     component: QuadrangleComponent
   },
   {
+    path: 'quadrangle',
+    data:{
+      breadcrumb: 'quadrangle'
+    },
+    loadChildren: () => import('./quadrangle.module').then(m => m.QuadrangleModule)
+  },
+  {
     path: 'kite',
     data:{
       breadcrumb: 'kite'
