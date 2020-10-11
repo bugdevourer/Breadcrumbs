@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'square',
     data:{
-      breadCrumb: 'square'
+      breadcrumb: 'square'
     },
     loadChildren: () => import('../square/square.module').then(m => m.SquareModule)
   }

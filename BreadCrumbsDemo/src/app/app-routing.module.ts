@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: 'quadrangle',
     data:{
-      breadCrumb: 'quadrangle'
+      breadcrumb: 'quadrangle'
     },
     loadChildren: () => import('./figures/quadrangle/quadrangle.module').then(m => m.QuadrangleModule)
   }

@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { BreadCrumb } from './BreadCrumb';
-import { ActivatedRoute, NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { Breadcrumb } from './Breadcrumb';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root',
 })
-export class BreadCrumbsService {
+export class BreadcrumbsService {
 
-    private _breadCrumbs = new Subject<BreadCrumb[]>();
+    private _breadcrumbs = new Subject<Breadcrumb[]>();
 
-    public breadCrumbs$ = this._breadCrumbs.asObservable();
+    public breadcrumbs$ = this._breadcrumbs.asObservable();
 
     constructor(
         private readonly _router: Router,
@@ -19,12 +19,12 @@ export class BreadCrumbsService {
         this._router.events
             .pipe(filter(event => event instanceof NavigationEnd))
             .subscribe(() => {
-                const breadCrumbs = this.createBreadcrumbs(this._activatedRoute.root);
-                this._breadCrumbs.next(breadCrumbs);
+                const breadcrumbs = this.createBreadcrumbs(this._activatedRoute.root);
+                this._breadcrumbs.next(breadcrumbs);
             });
     }
 
-    private createBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: BreadCrumb[] = []): BreadCrumb[] {
+    private createBreadcrumbs(route: ActivatedRoute, url: string = '', breadcrumbs: Breadcrumb[] = []): Breadcrumb[] {
 
         const children: ActivatedRoute[] = route.children;
 
@@ -37,7 +37,7 @@ export class BreadCrumbsService {
             if (routeURL !== '') {
                 url += `/${routeURL}`;
 
-                const label = child.snapshot.data.breadCrumb;
+                const label = child.snapshot.data.breadcrumb;
        
                 if (label) {
                     breadcrumbs.push({ label, url });

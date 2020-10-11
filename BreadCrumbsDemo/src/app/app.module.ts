@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { BreadCrumbsPreviewModule } from './bread-crumbs-preview/bread-crumbs-preview.module';
+import { BreadcrumbsPreviewModule } from './breadcrumbs-preview/breadcrumbs-preview.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { BreadCrumbsPreviewModule } from './bread-crumbs-preview/bread-crumbs-pr
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BreadCrumbsPreviewModule
+    BreadcrumbsPreviewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

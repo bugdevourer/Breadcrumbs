@@ -11,28 +11,28 @@ const routes: Routes = [
   {
     path: 'parallelogram',
     data:{
-      breadCrumb: 'parallelogram'
+      breadcrumb: 'parallelogram'
     },
     loadChildren: () => import('../parallelogram/parallelogram.module').then(m => m.ParallelogramModule)
   },
   {
     path: 'rectangle',
     data:{
-      breadCrumb: 'rectangle'
+      breadcrumb: 'rectangle'
     },
     loadChildren: () => import('../rectangle/rectangle.module').then(m => m.RectangleModule)
   },
   {
     path: 'rhombus',
     data:{
-      breadCrumb: 'rhombus'
+      breadcrumb: 'rhombus'
     },
     loadChildren: () => import('../rhombus/rhombus.module').then(m => m.RhombusModule)
   },
   {
     path: 'square',
     data:{
-      breadCrumb: 'square'
+      breadcrumb: 'square'
     },
     loadChildren: () => import('../square/square.module').then(m => m.SquareModule)
   }

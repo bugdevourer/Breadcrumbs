@@ -11,42 +11,42 @@ const routes: Routes = [
   {
     path: 'kite',
     data:{
-      breadCrumb: 'kite'
+      breadcrumb: 'kite'
     },
     loadChildren: () => import('../kite/kite.module').then(m => m.KiteModule)
   },
   {
     path: 'parallelogram',
     data:{
-      breadCrumb: 'parallelogram'
+      breadcrumb: 'parallelogram'
     },
     loadChildren: () => import('../parallelogram/parallelogram.module').then(m => m.ParallelogramModule)
   },
   {
     path: 'rectangle',
     data:{
-      breadCrumb: 'rectangle'
+      breadcrumb: 'rectangle'
     },
     loadChildren: () => import('../rectangle/rectangle.module').then(m => m.RectangleModule)
   },
   {
     path: 'rhombus',
     data:{
-      breadCrumb: 'rhombus'
+      breadcrumb: 'rhombus'
     },
     loadChildren: () => import('../rhombus/rhombus.module').then(m => m.RhombusModule)
   },
   {
     path: 'square',
     data:{
-      breadCrumb: 'square'
+      breadcrumb: 'square'
     },
     loadChildren: () => import('../square/square.module').then(m => m.SquareModule)
   },
   {
     path: 'trapezoid',
     data:{
-      breadCrumb: 'trapezoid'
+      breadcrumb: 'trapezoid'
     },
     loadChildren: () => import('../trapezoid/trapezoid.module').then(m => m.TrapezoidModule)
   },
