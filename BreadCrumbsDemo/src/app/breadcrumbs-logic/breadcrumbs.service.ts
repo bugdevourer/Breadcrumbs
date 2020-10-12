@@ -40,11 +40,21 @@ export class BreadcrumbsService {
                 const label = child.snapshot.data.breadcrumb;
        
                 if (label) {
-                    breadcrumbs.push({ label, url });
+                    const labelWithEnumerator = this.getLabelWithEnumerator(label, breadcrumbs);
+                    breadcrumbs.push(new Breadcrumb(labelWithEnumerator, url));
                 }
             }
 
             return this.createBreadcrumbs(child, url, breadcrumbs);
+        }
+    }
+
+    private getLabelWithEnumerator(label: string, breadcrumbs: Breadcrumb[]): string{
+        const numberOfAppearances = breadcrumbs.filter(b => b.label.startsWith(label)).length;
+        if(numberOfAppearances > 0){
+            return [label, numberOfAppearances + 1].join(' ');
+        } else {
+            return label;
         }
     }
 }
